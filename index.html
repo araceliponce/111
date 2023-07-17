@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Startpage 111</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/css/index.min.css">
+
+  <!-- JavaScript -->
+  <script type="module" src="/js/main.min.js"></script>
+  <script>
+    const root = document.documentElement;
+    const defaultBgColor = 'white';
+
+    const savedBgColor = localStorage.getItem('bgColor');
+    // if it doesn't exist in local storage, use defaultBgColor as currentBgColor
+    const currentBgColor = savedBgColor || defaultBgColor;
+
+    root.style.setProperty('--bg', currentBgColor);
+  </script>
+
+  <!-- Search Engine Optimization -->
+  <meta name="description" content="111 - The Ultimate Startpage for Developers">
+  <meta name="keywords" content="startpage, developer, search engine, joke generator, color customization, sidebar, recent commits">
+  <meta name="author" content="araceliponce">
+
+  <!-- Social Media Optimization -->
+  <meta property="og:title" content="Startpage 111">
+  <meta property="og:description" content="111 - The Ultimate Startpage for Developers">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.araceliponce.github.io/111/">
+  <meta property="og:image" content="https://www.araceliponce.github.io/111/images/og-image.jpg">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+</head>
+
+<body>
+  <div id="drawer-container" class="drawer-container">
+
+    <div class="drawer-pusher">
+      <nav class="drawer-menu drawer-effect-3" id="menu-3">
+
+        <div class="grid">
+          <h2>NOTES</h2>
+          <textarea id="noteTextarea" placeholder="Write something.."></textarea>
+          <small class="desktop">(shift + enter to save)</small>
+          <button id="saveButton" class="btn px">SAVE NOTE</button>
+        </div>
+
+        <div id="notas"></div>
+
+        <div class="grid mt">
+          <h2>COMMITS</h2>
+          <label for="usernameInput">GitHub username*</label>
+          <input type="text" id="usernameInput">
+          <label for="tokenInput">GitHub token</label>
+          <input type="text" id="tokenInput">
+          <button id="fetchMoreBtn" class="btn px">Fetch More</button>
+
+        </div>
+
+        <ul id="pushesBox" class="mt"></ul>
+      </nav>
+
+
+      <div class="wallpaper" id="wallpaper"></div>
+
+      <header>
+        <div class="d-flex">
+          <input type="color" name="" id="colorInput" class="btn">
+          <button class="btn px" id="resetColorBtn">reset</button>
+        </div>
+        <button data-effect="drawer-effect-3" class="btn px">MENU</button>
+      </header>
+
+      <main>
+        <div class="clock--circle">
+          <div class="outer-clock-face">
+            <div class="marking marking-one"></div>
+            <div class="marking marking-two"></div>
+            <div class="marking marking-three"></div>
+            <div class="marking marking-four"></div>
+            <div class="inner-clock-face">
+              <div class="hand hour"></div>
+              <div class="hand min"></div>
+              <div class="hand sec"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <form id="form" class="mx-auto">
+          <input id="query" class="" type="text" placeholder="Search on Google" />
+        </form>
+        <div id="jokeBox"></div>
+
+      </main>
+
+    </div>
+
+</body>
+
+</html>
